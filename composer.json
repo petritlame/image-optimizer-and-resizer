@@ -1,0 +1,32 @@
+{
+    "name": "titi23/image-optimizer-and-resizer",
+    "description": "Optimize And  Resize Images in server",
+    "keywords": [
+        "titi23",
+        "image-optimizer-and-resizer"
+    ],
+    "homepage": "https://github.com/petritlame/image-compress",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petrit Lame",
+            "email": "titilame95@gmail.com",
+            "homepage": "https://digitalmoon.al",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2",
+        "laravel/framework": "~5.7.0|~5.8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload":  {
+        "psr-4": {
+            "titi23\\ImageOptimizer\\": "src/"
+        }
+    }
+}
