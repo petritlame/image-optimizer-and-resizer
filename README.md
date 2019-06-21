@@ -41,7 +41,12 @@ composer require titi23/image-optimizer-and-resizer
 Copy and Paste the Service Provider in config/app.php
 
 ```php
-titi23\ImageCompress\ImageCompressServiceProvider::class
+'providers' => [
+ ...
+ ...
+ titi23\ImageCompress\ImageCompressServiceProvider::class
+ ...
+]
 ```
 
 After that, publish the package by running this in your terminal
