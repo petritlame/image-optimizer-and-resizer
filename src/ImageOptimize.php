@@ -12,10 +12,11 @@ class ImageOptimize extends ImageResizer
 
     public function __construct()
     {
-        $this->_supportedFormat = config('image-compress.supportedFormat');
-        $this->_quality = config('image-compress.compressRate');
-        $this->_uploadDir = public_path('/').config('image-compress.upload_dir');
-        $this->url = config('image-compress.upload_dir');
+        $this->_supportedFormat = config('image-optimizer.supportedFormat');
+        $this->_quality = config('image-optimizer.compressRate');
+        $this->_uploadDir = public_path('/').config('image-optimizer.upload_dir');
+        $this->url = config('image-optimizer.upload_dir');
+        parent::init();
     }
 
     public function ImageOptimized($source, $saveOriginal = false){
@@ -23,7 +24,7 @@ class ImageOptimize extends ImageResizer
         $quality = $this->_quality;
         $uploadDir = $this->_uploadDir;
 //        $destination = '';
-
+        dd($formats);
         //make dir to save optimized images if saveOriginal true.
         if (file_exists($source)) {
             if ($saveOriginal) {
@@ -33,6 +34,7 @@ class ImageOptimize extends ImageResizer
             }
             $imgData = getimagesize($source);
             $imgExtension = $imgData['mime'];
+            dd($formats);
             if(in_array($imgExtension,$formats)) {
                 switch ($imgExtension) {
                     case 'image/jpeg':
