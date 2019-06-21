@@ -22,6 +22,15 @@ $optimizedImage = new ImageOptimize();
 $optimizedImage->ResizeAspectRatio($pathToImage, $percent, $saveOriginal);
 ```
 
+Resize Image with new width but not losing AspectRatio of the original image (without stretching the new image) 
+```php
+use titi23\ImageOptimizer\ImageOptimize;
+
+$optimizedImage = new ImageOptimize();
+
+$optimizedImage->ResizeWidth($pathToImage, $newWidth, $saveOriginal);
+```
+
 ### Installation
 
 You can install the package via composer:
